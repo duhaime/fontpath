@@ -22,6 +22,13 @@ The project is similar to [typeface.js](http://typeface.neocracy.org/) and [cufo
 
 The default size is 12 pt, but exporting with a higher font size will give you better resolution when rendering the path at large sizes. It's best to match the exported size to the final rendered size, as it will produce better rounding when scaled down.
 
+Please note to use this package, you'll need to load an older version of Node, e.g. with [nvm](https://github.com/creationix/nvm):
+
+```
+nvm install 0.10.48
+nvm use 0.10.48
+```
+
 # roadmap
 
 This project is a heavy WIP. Some things I want to explore:
@@ -35,12 +42,12 @@ New modules will be added to [text-modules](https://github.com/mattdesl/text-mod
 
 # demos
 
-- [Triangulated text effect](http://mattdesl.github.io/fontpath-renderer/demo/tris.html) - a custom renderer using triangles 
+- [Triangulated text effect](http://mattdesl.github.io/fontpath-renderer/demo/tris.html) - a custom renderer using triangles
 - [Custom steiner points](http://mattdesl.github.io/shape2d-triangulate/demo/glyph.html) - finer control over triangulation for creative effects
 - [WebGL Path Rendering](http://mattdesl.github.io/fontpath-gl/demo/)
 - [WebGL Triangulated Rendering](http://mattdesl.github.io/fontpath-gl/demo/wireframe.html)
 - [Bitmap Fonts](http://mattdesl.github.io/gl-sprite-text/demo/demo.html)
-- [Signed-Distance Field Bitmap Fonts](http://mattdesl.github.io/gl-sprite-text/demo/demo-sdf.html) 
+- [Signed-Distance Field Bitmap Fonts](http://mattdesl.github.io/gl-sprite-text/demo/demo-sdf.html)
 
 # modules
 
@@ -48,7 +55,7 @@ New modules will be added to [text-modules](https://github.com/mattdesl/text-mod
 
 The framework is split into many small modules. Some of them aren't specific to fontpath, but are useful alongside it. You generally won't need to use all of them together; but instead, you'll pick and choose based on your particular application.
 
-Most commonly, you might want to use a "renderer" which gives you a basic word-wrapper and glyph layout tools. 
+Most commonly, you might want to use a "renderer" which gives you a basic word-wrapper and glyph layout tools.
 
 - [fontpath-canvas](https://github.com/mattdesl/fontpath-canvas) - a renderer using 2D Canvas and paths for fill/stroke
 - [fontpath-gl](https://github.com/mattdesl/fontpath-gl) - a WebGL renderer using stackgl modules
